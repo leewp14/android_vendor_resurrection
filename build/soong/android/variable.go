@@ -1,5 +1,9 @@
 package android
 type Product_variables struct {
+	Exynos4_enhancements struct {
+		Cflags []string
+		Cppflags []string
+	}
 	Additional_gralloc_10_usage_bits struct {
 		Cppflags []string
 	}
@@ -59,6 +63,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Exynos4_enhancements    *bool `json:",omitempty"`
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Device_support_hwfde  *bool `json:",omitempty"`
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
