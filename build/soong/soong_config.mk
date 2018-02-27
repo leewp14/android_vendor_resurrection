@@ -3,6 +3,7 @@ add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 _contents := $(_contents)    "Lineage":{$(newline)
 
 # See build/core/soong_config.mk for the add_json_* functions you can use here.
+$(call add_json_bool, Use_samsung_colorformat, $(filter true,$(BOARD_USE_SAMSUNG_COLORFORMAT)))
 $(call add_json_bool, Requires_synchronous_setsurface, $(filter true,$(TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE)))
 $(call add_json_bool, Disable_ashmem_tracking, $(filter true,$(TARGET_DISABLE_ASHMEM_TRACKING)))
 $(call add_json_bool, Allows_invalid_pthread, $(filter true,$(TARGET_ALLOWS_INVALID_PTHREAD)))
